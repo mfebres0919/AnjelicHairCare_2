@@ -1147,7 +1147,7 @@ h1 {
 }
 
 .showcase-slider {
-  max-width: 1050px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
@@ -1247,7 +1247,7 @@ h1 {
 }
 
 /* Mobile tweaks */
-@media (max-width: 600px) {
+@media (max-width: 1600px) {
   .showcase-prev { left: 10px; }
   .showcase-next { right: 10px; }
   .showcase-arrow {
