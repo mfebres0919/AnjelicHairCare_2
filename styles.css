@@ -2093,8 +2093,8 @@ h1 {
 /* ========================= */
 
 .testimonial-card {
-  min-width: 260px;
-  max-width: 300px; /* keeps widths identical for seamless looping */
+  min-width: 220px;
+  max-width: 290px; /* keeps widths identical for seamless looping */
   background:  #ffffff;
   border-radius: 1.25rem;
   padding: 2rem;
@@ -2145,10 +2145,10 @@ h1 {
 /* RESPONSIVE                */
 /* ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
   .testimonial-card {
-    min-width: 240px;
-    max-width: 300px;
+    min-width: 200px;
+    max-width: 220px;
     padding-top: 2.2rem;
   }
 }
