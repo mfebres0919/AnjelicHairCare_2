@@ -1114,6 +1114,11 @@ h1 {
   color: white;
 }
 
+.cta-2-header h1 {
+    line-height: 2.8rem;
+}
+
+
 .cta-2-paragraph {
   background-color: #2e2624;
   padding: 2rem;
