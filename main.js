@@ -149,3 +149,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+/* =========================
+   SHOWCASE SLIDER (JS)
+========================= */
+(function () {
+  const slider = document.querySelector('.showcase-slider');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.showcase-slide'));
+  const dots = Array.from(slider.querySelectorAll('.showcase-dot'));
+  const prevBtn = slider.querySelector('.showcase-prev');
+  const nextBtn = slider.querySelector('.showcase-next');
+
+  let current = slides.findIndex(s => s.classList.contains('is-active'));
+  if (current === -1) current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    dots[current]?.classList.remove('is-active');
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.add('is-active');
+    dots[current]?.classList.add('is-active');
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goTo(i));
+  });
+
+  // Optional: keyboard support when focused
+  slider.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+})();
