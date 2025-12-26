@@ -1975,16 +1975,34 @@ h1 {
 }
 
 @media (min-width: 1024px) {
+  .why-us-titles, .reason-boxes {
+    max-width: 930px;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
   
 }
 
 @media (min-width: 1200px) {
+  .why-us-titles, .reason-boxes {
+    max-width: 930px;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
 }
 
 @media (min-width: 1500px) {
-  .why-us-titles, .reason-boxes {
-    max-width: 1500px;
+  .why-us-content-2 {
+    display: flex;
+    max-width: 1200px;
+    gap: 2rem;
     margin: 0 auto;
+  }
+  
+  .why-us-titles, .reason-boxes {
+    max-width: 930px;
+    margin: 0 auto;
+    padding-top: 5rem;
   }
 
   .reason-1 {
@@ -2090,6 +2108,7 @@ h1 {
   font-family: "DM Serif Display", serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  line-height: 2rem;
 }
 
 .stars {
