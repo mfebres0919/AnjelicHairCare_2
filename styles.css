@@ -2041,6 +2041,7 @@ img {
 .testimonials-header h1 {
   text-align: center;
   margin-bottom: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 /* Row wrapper (hides overflow) */
