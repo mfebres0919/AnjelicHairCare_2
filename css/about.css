@@ -1042,8 +1042,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .about-titles p {
@@ -1052,7 +1052,7 @@ h1 {
 
 .about-titles h1 {
   line-height: 4rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0rem 2rem 0rem;
 }
 .about-2-img img {
   width: clamp(18rem, 40vw, 28rem);
@@ -1245,6 +1245,19 @@ h1 {
   transform: scale(1.15);
   opacity: 1;
 }
+
+.showcase-dots {
+  overflow: hidden;
+  max-width: 140px; /* controls how many dots are visible */
+  margin-inline: auto;
+}
+
+.showcase-dots-inner {
+  display: flex;
+  gap: 0.5rem;
+  transition: transform 0.35s ease;
+}
+
 
 /* Mobile tweaks */
 @media (max-width: 1600px) {

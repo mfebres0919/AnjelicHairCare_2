@@ -160,11 +160,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const slides = Array.from(slider.querySelectorAll('.showcase-slide'));
   const dots = Array.from(slider.querySelectorAll('.showcase-dot'));
+  const dotsContainer = slider.querySelector('.showcase-dots');
+  const dotsTrack = slider.querySelector('.showcase-dots-track');
   const prevBtn = slider.querySelector('.showcase-prev');
   const nextBtn = slider.querySelector('.showcase-next');
 
   let current = slides.findIndex(s => s.classList.contains('is-active'));
   if (current === -1) current = 0;
+
+  function centerActiveDot() {
+    const activeDot = dots[current];
+    if (!activeDot) return;
+
+    const containerWidth = dotsContainer.offsetWidth;
+    const dotRect = activeDot.getBoundingClientRect();
+    const trackRect = dotsTrack.getBoundingClientRect();
+
+    const dotCenter =
+      dotRect.left - trackRect.left + dotRect.width / 2;
+
+    const offset = dotCenter - containerWidth / 2;
+
+    dotsTrack.style.transform = `translateX(${-offset}px)`;
+  }
 
   function goTo(index) {
     slides[current].classList.remove('is-active');
@@ -174,6 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides[current].classList.add('is-active');
     dots[current]?.classList.add('is-active');
+
+    centerActiveDot();
   }
 
   prevBtn.addEventListener('click', () => goTo(current - 1));
@@ -183,9 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener('click', () => goTo(i));
   });
 
-  // Optional: keyboard support when focused
-  slider.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') goTo(current - 1);
-    if (e.key === 'ArrowRight') goTo(current + 1);
-  });
+  // Initial centering on load
+  window.addEventListener('load', centerActiveDot);
 })();
