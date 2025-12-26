@@ -1566,6 +1566,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  line-height: 2.8rem;
   color: #ffd76a; /* bright warm gold */
     text-shadow:
       0 0 4px rgba(255, 215, 106, 0.7),
@@ -1830,6 +1831,7 @@ h1 {
 
 .card-1-content h1 {
   padding-bottom: 1rem;
+  line-height: 2.8rem;
 }
 
 
@@ -1934,6 +1936,7 @@ h1 {
 .why-us-titles h1 {
   letter-spacing: 2px;
   padding-bottom: 2rem;
+  line-height: 2.8rem;
 }
 
 .why-us-img {
@@ -2278,6 +2281,10 @@ h1 {
   color: white;
 }
 
+.cta-2-header h1 {
+  line-height: 2.8rem;
+}
+
 .cta-2-paragraph {
   background-color: #2e2624;
   padding: 2rem;
@@ -2408,22 +2415,26 @@ footer {
 }
 
 
-
 /* CLAMPS FOR TYPOGRAPHY */
 
 p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 2.2rem;
 }
 
-a,li {
-  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+li {
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   line-height: 3rem;
 }
 
+button {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  line-height: 1.5rem;
+}
+
 h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
-  line-height: 5.5rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 6rem;
 
 } 
 h2 {
@@ -2454,12 +2465,16 @@ h6 {
   font-size: clamp(3rem, 6vw, 5rem);
 }
 
-.carousel-track {
+.carousel-track, .carousel-track2 {
   font-size: clamp(1.4rem, 4vw, 3rem);
 }
 
-.carousel-item {
+.carousel-item, .carousel-item2 {
   font-size: 1.2em; /* inherits and stays proportional */
+}
+
+.carousel-item2 {
+  font-size: 1.2em;
 }
 
 .carousel-track img {
