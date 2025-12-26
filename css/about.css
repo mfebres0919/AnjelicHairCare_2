@@ -715,7 +715,19 @@ h1 {
   }
 }
 
+/* Logo link specifically */
+.cs-logo,
+.cs-logo img {
+  -webkit-tap-highlight-color: transparent;
+}
 
+.cs-logo:active {
+  background-color: transparent;
+}
+
+img {
+  -webkit-touch-callout: none;
+}
 
 
 /* =====================================
